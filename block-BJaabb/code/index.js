@@ -74,12 +74,15 @@ Example:
 
 */
 
-let num1=prompt("enter first number");
-let num2=prompt("enter second number");
+let num1=Number(prompt("enter first number"));
+let num2=Number(prompt("enter second number"));
 
 
-num1=="true" || num2=="true"?alert("Enter a valid value"):num1=="null" || num2=="null"?alert("Enter a valid value"):num1=="undefined" || num2=="undefined"?alert("Enter a valid value"):num1==num2?alert(true):alert(false);
-
+if(isNaN(num1) || isNaN(num2)){
+    alert("Enter a valid value");
+}else{
+    alert(num1===num2);
+}
 
 
 

@@ -11,6 +11,18 @@ Write a program that asks the user his/her age and check for the following condi
 👇
 */
 
+let age = Number(prompt("Enter the age?"));
+
+if (age >= 12 && age <= 55) {
+  console.log("You can participate in the marathon");
+} else if (age >= 4 && age <= 11) {
+  console.log("You are too young to participate in the marathon");
+} else if (age < 4) {
+  console.log("Hey Kiddo! Can You Walk ?");
+} else if (age > 55) {
+  console.log("You are too old to participate in the marthon");
+}
+
 // Loops
 /*
 Given a positive integer `n`. Print the word (hello) in format of heeeello (letter 'e' must be repeated `n` times). Take input from prompt and print the result in alert.
@@ -22,11 +34,28 @@ n = 7 => output: heeeeeeello
 */
 // [Your code goes here]
 
+let n = Number(prompt("Enter the Number"));
+var eCount = "";
+for (i = 1; i <= n; i++) {
+  eCount += "e";
+}
+alert(`h${eCount}llo`);
+
 /*
 Program to calculate the sum of first n natural numbers(1,2,3...n are known as natural numbers). Prompt user to enter n (using `prompt`) then based on input provided calculate and show result in `alert`.
 👇
 */
 // [Your code goes here]
+
+let number = Number(prompt("Enter the number"));
+
+let sum = 0;
+
+for (i = 1; i <= number; i++) {
+  sum += i;
+}
+
+alert(sum);
 
 /* Switch Statement
 
@@ -47,6 +76,40 @@ Take a number value from user and alert the message if it matches the conditions
 */
 // [Your code goes here]
 
+let inputNumber = Number(prompt("Enter the input"));
+
+switch (inputNumber) {
+  case 1:
+    alert(`ONE`);
+    break;
+  case 2:
+    alert(`TWO`);
+    break;
+  case 3:
+    alert(`THREE`);
+    break;
+  case 4:
+    alert(`FOUR`);
+    break;
+  case 5:
+    alert(`FIVE`);
+    break;
+  case 6:
+    alert(`SIX`);
+    break;
+  case 7:
+    alert(`SEVEN`);
+    break;
+  case 8:
+    alert(`EIGHT`);
+    break;
+  case 9:
+    alert(`NINE`);
+    break;
+  default:
+    alert(`PLEASE TRY AGAIN`);
+}
+
 /*
 🎖Using switch statement do the following
 
@@ -63,15 +126,61 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 
 // [Your code goes here]
 
+let marks = Number(prompt("Enter the input"));
+
+switch (true) {
+  case marks > 90:
+    alert(`Your Grade is AA`);
+    break;
+  case marks > 80 && marks <= 90:
+    alert(`Your Grade is AB`);
+    break;
+  case marks > 70 && marks <= 80:
+    alert(`Your Grade is BB`);
+    break;
+  case marks > 60 && marks <= 70:
+    alert(`Your Grade is BC`);
+    break;
+  case marks > 50 && marks <= 60:
+    alert(`Your Grade is CC`);
+    break;
+  case marks > 40 && marks <= 50:
+    alert(`Your Grade is CD`);
+    break;
+  case marks > 30 && marks <= 40:
+    alert(`Your Grade is DD`);
+    break;
+  case marks < 30:
+    alert(`Your Grade is FF`);
+    break;
+  default:
+    alert(`PLEASE TRY AGAIN`);
+}
+
 /*
  🎖Write a JavaScript program that takes two `integers` from user (using prompt) and alerts the larger number.
 */
 // [your code goes here]
 
+let integer1 = Number(prompt("Enter the first integer"));
+let integer2 = Number(prompt("Enter the second integer"));
+
+alert(integer1 > integer2 ? integer1 : integer2);
+
 /*
 🎖Write a JavaScript conditional statement to find the sign (+, -) of product of three numbers. Take those three numbers from user using `prompt`. Display an alert box with the specified sign.
 */
 // [Your code goes here]
+
+let num1 = Number(prompt("Enter the Number 1"));
+let num2 = Number(prompt("Enter the Number 2"));
+let num3 = Number(prompt("Enter the Number 3"));
+
+if (num1 * num2 * num3 < 0) {
+  alert("-");
+} else {
+  alert("+");
+}
 
 /* Calculator
  🎖Make a simple calculator with these functions. Using prompt, type conversion, if else statement. Use prompt to take the input from user i.e two numbers and an operation (Add, Sub, Mul, Div).
@@ -86,3 +195,30 @@ Take the value of `marks` (0-100) from user using `prompt` and `alert` the messa
 */
 
 // [Your code goes here]
+
+let operand1 = Number(prompt("Enter the Value 1"));
+let operand2 = Number(prompt("Enter the value2"));
+let operation = prompt("Enter the Operation");
+
+switch (operation) {
+  case "add":
+    alert(`Addition: ${operand1 + operand2}`);
+    break;
+  case "sub":
+    if (operand1 > operand2) {
+      alert(`Subtraction: ${operand1 - operand2}`);
+    } else {
+      alert(`Number Two is larger then Number one`);
+    }
+    break;
+  case "mul":
+    alert(`Multiplication: ${operand1 * operand2}`);
+    break;
+  case "div":
+    if (operand1 > operand2) {
+      alert(`Division: ${operand1 / operand2}`);
+    } else {
+      alert(`Number Two is larger then Number one`);
+    }
+    break;
+}

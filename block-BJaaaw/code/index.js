@@ -7,29 +7,30 @@
   - `if` the number is odd print the message "number is odd"
 */
 
-let num=Number(prompt("Please Enter the number?"));
-
-if(num1%2==0){
-  console.log("number is even");
+let num = prompt( "Enter the num" );
+if ( num % 2 === 0 ) {
+  console.log( "nnumber is even" )
 }else{
-  console.log("number is odd");
+  console.log( "number is odd" )
 }
 
 
 // 2. Write a program to accept two numbers from user using`prompt` and alert the max value.
 
-let number1 = Number(prompt("Enter the Number1?"));
-let number2 = Number(prompt("Enter the Number2?"));
+let num1 = prompt( "number1" );
+let num2 = prompt( "number2" );
 
-if(number1>number2){
-  alert(number1);
+if ( num1 > num2 ) {
+  alert( num1 )
 }else{
-  alert(number2);
+  alert( num2 )
 }
+
 
 // 3. Convert the above code using`?` terniary operator
 
-console.log(number1>number2?number1:number2);
+num1 > num2 ? alert( num1 ) : alert( num2 )
+
 
 /*
 4. Write a program that asks the user for the house name and check the following conditions:
@@ -39,58 +40,62 @@ console.log(number1>number2?number1:number2);
   - `else` print the message " All men must die"
 */
 
-let houseName=prompt("Enter the house name?");
-if(houseName==="stark"){
-  console.log("Winter is coming");
-}else if(houseName==="lannister"){
-  console.log("A lannister always pays his debt");
+let houseName = prompt( "Enter the house name" );
+if ( houseName === "stark" ) {
+  console.log( "Winter is coming" );
+} else if ( houseName === "lannister" ) {
+  console.log( "A lannister always pays his debt" )
 }else{
-  console.log("All men must die");
+  console.log( "All men must die" )
 }
+
 
 // 5. Convert the above code using`?` terniary operator
 
-console.log((houseName==="stark")?"Winter is coming":(houseName==="lannister")?"A lannister always pays his debt":"All men must die")
+houseName === "stark" ? console.log( "Winter is coming" ) : houseName === "lannister" ? console.log( "A lannister always pays his debt" ) : console.log( "All men must die" )
+
 
 // Switch
 
-switch (true) {
-  case houseName==="stark":
-    console.log("Winter is coming");
+switch ( true ) {
+  case houseName === "stark":
+  console.log("Winter is coming");
     break;
-  case houseName==="lannister":
-    console.log("A lannister always pays his debt");
+  case houseName === "lannister":
+    console.log( "A lannister always pays his debt" );
     break;
   default:
-    console.log("All men must die");
-    break;
+    console.log( "All men must die" )
 }
+
 
 // 6. Write a program that takes the number of the month(1 - 12) and alert number of days in the month.
 
-let month=Number(prompt("Please enter the month"));
+let month = prompt( "Enter the month" );
 
-switch (month) {
-  case 1:
-  case 3:
-  case 5:
-  case 7:
-  case 8:
-  case 10:
-  case 12:
-    alert("31 Days");
+switch ( true ) {
+  case month == 1:
+  case month == 3:
+  case month == 5:
+  case month == 7:
+  case month == 8:
+  case month == 10:
+  case month == 12:
+    alert( "31 days" );
     break;
-  case 4:
-  case 6:
-  case 9:
-  case 11:
-    alert("30 Days")
+  case month == 4:
+  case month == 6:
+  case month == 9:
+  case month == 11:
+    alert( "30 days" );
     break;
-
+  case month == 2:
+    alert( "28 days" );
+    break;
   default:
-    alert("28 Days")
-    break;
+    alert( " Please enter a number between 1-12" )
 }
+
 
 /* 7.
 - Write a program that take the salery of the user using prompt and alert the in -hand amount.You will find out the in -hand amount by deducting the tax amoun from salery.Conditions are given below.
@@ -101,16 +106,20 @@ switch (month) {
 */
 
 //  if..else vs switch
-
-let salary=Number(prompt("Enter the Salary?"));
-
-if(salary<=20000){
-  alert(`In Hand amount is ${salary*(90/100)}`);
-}else if(salary <= 40000){
-  alert(`In Hand amount is ${salary*(80/100)}`);
-}else if(salary > 50000){
-  alert(`In Hand amount is ${salary*(70/100)}`);
+let salary = prompt( "Enter the Salary" );
+let inHandSalary;
+if ( salary <= 20000 ) {
+  inHandSalary = salary * ( ( 100 - 10 ) / 100 );
+  alert( inHandSalary );
+} else if ( Salary <= 40000 ) {
+  inHandSalary = salary * ( ( 100 - 20 ) / 100 );
+  alert( inHandSalary );
+} else if ( Salary > 50000 ) {
+  inHandSalary = salary * ( ( 100 - 30 ) / 100 );
+  alert( inHandSalary );
 }
+
+
 
 /* 8.
 Implement the condition give below using`if..else` and`switch` statement.
@@ -123,36 +132,39 @@ Implement the condition give below using`if..else` and`switch` statement.
 
 */
 
-let marks=Number(prompt("Enter the marks"));
+let marks = prompt( "Please enter the marks" );
 
-if(marks>100){
-  alert("Marks can't be greater than 100");
+if ( marks > 100 ) {
+  alert( "Marks can't be greater than 100" )
 }else if(marks > 80 && marks < 100){
-  alert("Grade A");
+  alert( "Grade A" )
 }else if(marks > 50 && marks < 80){
-  alert("Grade B");
+  alert( "Grade B" )
 }else if(marks > 30 && marks < 50){
-  alert("Grade C");
-}else if(marks > 0){
-  alert("Grade D");
+  alert( "Grade C" );
+} else if ( marks > 0 ) {
+  alert( "Grade D" )
 }
 
-switch (true) {
-  case marks>100:
-    alert("Marks can't be greater than 100");
+switch ( true ) {
+  case marks > 100:
+    alert( "Marks can't be greater than 100" )
     break;
   case marks > 80 && marks < 100:
-    alert("Grade A");
-    break;
+    alert( "Grade A" );
+  break;
   case marks > 50 && marks < 80:
-    alert("Grade B");
+    alert( "Grade B" );
+    break;
   case marks > 30 && marks < 50:
-    alert("Grade C");
+    alert( "Grade C" );
     break;
   case marks > 0:
-    alert("Grade D");
-    break;
+    alert( "Grade D" );
+  break;
 }
+
+
 
 /* 9. Weather app
 
@@ -164,8 +176,21 @@ switch (true) {
   - Anything else should alert`Not a valid input`
 */
 
-let weatherCondition = prompt("What is the weather like outside?");
+let weather = prompt( "What is the weather like outside?" )
 
-weatherCondition=="sunny"?alert("Wear a T-shirt"):weatherCondition=="rainy"?alert("Don't forget to take your raincoat"):weatherCondition=="hot"?alert("Get a hanky"):weatherCondition=="freezing"?alert("Get your sweeter on"):alert("Not a valid input")
-
-
+switch ( true ) {
+  case weather === "sunny":
+    alert( "Wear a T-shirt" );
+    break;
+  case weather === "rainy":
+    alert( "Don't forget to take your raincoat" );
+    break;
+  case weather === "hot":
+    alert( "Get a hanky" );
+    break;
+  case weather === "freezing":
+    alert( "Get your sweeter on" );
+    break;
+  default:
+    alert( "Not a valid input" );
+}

@@ -15,14 +15,15 @@ var bank_balance = 303.91;
 var amount = 0;
 // your code goes here
 
-while ( amount <= bank_balance ) {
+while ( PHONE_PRICE <= bank_balance ) {
     amount += PHONE_PRICE;
+    bank_balance -= PHONE_PRICE;
     if ( amount < SPENDING_THRESHOLD ) {
         amount += ACCESSORY_PRICE;
     }
 }
 
-amount = amount * ( 1 - TAX_RATE );
+amount = amount * ( 1 + TAX_RATE );
 
 alert( amount );
 
